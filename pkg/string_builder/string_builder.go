@@ -1,6 +1,7 @@
 package string_builder
 
 import (
+	"strconv"
 	"unicode/utf8"
 	"unsafe"
 )
@@ -146,3 +147,9 @@ func (b *StringBuilder) AppendString(s string) *StringBuilder {
 	_, _ = b.WriteString(s)
 	return b
 }
+
+func (b *StringBuilder) AppendInt(n int) *StringBuilder {
+	b.AppendString(strconv.Itoa(n))
+	return b
+}
+
