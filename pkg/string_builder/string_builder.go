@@ -14,8 +14,12 @@ type StringBuilder struct {
 	buf  []byte
 }
 
-func New() *StringBuilder {
-	return &StringBuilder{}
+func New(initCap ...int) *StringBuilder {
+	b := &StringBuilder{}
+	if len(initCap) > 0 {
+		b = b.Grow(initCap[0])
+	}
+	return b
 }
 
 // noescape hides a pointer from escape analysis.  noescape is

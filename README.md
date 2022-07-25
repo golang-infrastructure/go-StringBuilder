@@ -13,7 +13,9 @@ Golang中的strings.Builder并不是真正的Builder模式，连续拼接要换�
 # Example
 
 ```go
-
+builder := string_builder.New()
+s := builder.AppendString("test").AppendString(" a is: ").AppendInt(100).String()
+fmt.Println(s) // test a is: 100
 ```
 
 
