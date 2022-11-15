@@ -1,4 +1,4 @@
-package string_builder
+package go_StringBuilder
 
 import (
 	"strconv"

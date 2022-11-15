@@ -3,7 +3,7 @@
 # 引入依赖
 
 ```text
-go get -u github.com/CC11001100/go-StringBuilder 
+go get -u github.com/golang-infrastructure/go-StringBuilder 
 ```
 
 # 说明
